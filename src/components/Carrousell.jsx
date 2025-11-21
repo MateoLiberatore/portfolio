@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const styles = {
   root: ["w-full", "h-full", "mx-auto"].join(" "),
-  slideWrap: ["px-5", "sm:px-8", "h-full"].join(" ")
+  slideWrap: ["px-5", "sm:px-8", "h-full"].join(" ") 
 };
 
 const projects = [

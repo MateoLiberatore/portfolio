@@ -75,7 +75,9 @@ const styles = {
   description: [
     "text-slate-400", "max-w-xl", "font-ms",
     "text-xs", 
-    "sm:text-base", "leading-tight"
+    "sm:text-base", "leading-tight",
+    "mx-auto", 
+    "min-[1280px]:mx-0"
   ].join(" ")
 };
 
@@ -95,9 +97,11 @@ export default function Personal({ themes, themeSelected, handleThemeChangeByVal
           <p className={styles.description}>
             I am Systems Analyist and Full Stack Developer, focused on transforming business vision into concrete and efficient 
             technological solutions. My profile combines the capacity of an analyst to diagnose needs and design robust architectures 
-            with the technical skill of a Full Stack Developer to implement the solution end-to-end. My goal is to drive innovation 
-            by 
-            delivering software products that are both highly functional and strategically aligned with business objectives.
+            with the technical skill of a Full Stack Developer to implement the solution end-to-end.
+          </p>
+          <p className={styles.description}>
+            My goal is to drive innovation by delivering software products that are both highly functional and strategically aligned 
+            with business objectives.
           </p>
           <div className={styles.themeContainer}>
             <ThemeSelector
