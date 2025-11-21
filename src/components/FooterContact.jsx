@@ -1,0 +1,28 @@
+import React from "react";
+import ContactLink from "./elements/ContactLink";
+
+const styles = {
+  root: ["w-full", "py-6"].join(" "),
+  inner: ["w-full", "flex", "justify-center"].join(" "),
+  list: ["flex", "flex-col", "gap-4", "sm:flex-row", "sm:gap-12", "items-center"].join(" ")
+};
+
+export default function FooterContact() {
+  const items = [
+    { href: "mailto:tuemail@example.com", label: "Email", icon: "mail" },
+    { href: "https://github.com/tuusuario", label: "GitHub", icon: "github" },
+    { href: "https://linkedin.com/in/tuusuario", label: "LinkedIn", icon: "linkedin" }
+  ];
+
+  return (
+    <footer className={styles.root}>
+      <div className={styles.inner}>
+        <div className={styles.list}>
+          {items.map((c) => (
+            <ContactLink key={c.label} {...c} />
+          ))}
+        </div>
+      </div>
+    </footer>
+  );
+}
