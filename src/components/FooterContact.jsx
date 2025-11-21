@@ -2,7 +2,7 @@ import React from "react";
 import ContactLink from "./elements/ContactLink";
 
 const styles = {
-  root: ["w-full", "py-6","mt-10"].join(" "),
+  root: ["w-full", "py-2","mt-10", "mb-5"].join(" "),
   inner: ["w-full", "flex", "justify-center"].join(" "),
   list: ["flex", "flex-col", "gap-4", "sm:flex-row", "sm:gap-12", "items-center"].join(" ")
 };

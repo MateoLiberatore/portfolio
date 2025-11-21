@@ -10,8 +10,9 @@ const techMap = {
 const styles = {
   articleBase: [
     "flex", "flex-col", "gap-6", "w-full", "text-foreground", 
-    "items-start",
-    "min-[720px]:flex-row"
+    "items-center",
+    "min-[720px]:flex-row",
+    "min-[720px]:items-start"
   ].join(" "),
   
   imgWrap: [
@@ -19,6 +20,7 @@ const styles = {
     "min-[720px]:w-1/2",
     "min-[720px]:justify-start"
   ].join(" "),
+
   imgBox: [
     "w-full", "h-48", "sm:h-56", "min-[720px]:h-64", "min-[1280px]:h-72", 
     "bg-secondary", "rounded-lg", "grid", "place-items-center", "text-sm", "text-accent"
@@ -28,8 +30,9 @@ const styles = {
     "w-full",
     "flex", "flex-col", "gap-4", 
     "justify-between",
-    "items-start", "text-left",
-    "min-[720px]:w-1/2"
+    "items-center", "text-center",
+    "min-[720px]:w-1/2",
+    "min-[720px]:items-start", "min-[720px]:text-left"
   ].join(" "),
   
   title: [
@@ -42,12 +45,14 @@ const styles = {
   stackRow: [
     "flex", "flex-wrap", "gap-4", 
     "text-xl", "text-accent", 
-    "items-start", "justify-start"
+    "items-start", "justify-center",
+    "min-[720px]:justify-start"
   ].join(" "),
 
   linkRow: [
-    "flex", "gap-5", "text-3xl", "text-accent", 
-    "items-starts", "justify-start", ""
+    "flex", "gap-5", "text-xl", "text-accent", 
+    "items-start", "justify-center",
+    "min-[720px]:justify-start"
   ].join(" ")
 };
 
@@ -68,7 +73,7 @@ export default function ProjectCard({ image, title, description, stack = [], rep
 
         <div className={styles.stackRow}>
           {stack.map((s) => (
-            <span key={s} className="  hover:scale-150 transition-all duration-200 ease-in-out cursor-pointer">
+            <span key={s} className="hover:scale-150 transition-all duration-200 ease-in-out cursor-pointer">
               {techMap[s]}
             </span>
           ))}
