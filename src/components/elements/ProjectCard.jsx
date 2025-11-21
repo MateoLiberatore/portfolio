@@ -21,9 +21,15 @@ const styles = {
     "min-[720px]:justify-start"
   ].join(" "),
 
-  imgBox: [
+  imgBase: [
     "w-full", "h-48", "sm:h-56", "min-[720px]:h-64", "min-[1280px]:h-72", 
-    "bg-secondary", "rounded-lg", "grid", "place-items-center", "text-sm", "text-accent"
+    "rounded-lg",
+    // FIX: Agregamos overflow-hidden para recortar correctamente la imagen dentro del contenedor redondeado y eliminar el borde inferior.
+    "overflow-hidden" 
+  ].join(" "),
+  
+  imgPlaceholder: [
+    "bg-secondary", "grid", "place-items-center", "text-sm", "text-accent"
   ].join(" "),
   
   contentWrap: [
@@ -31,8 +37,10 @@ const styles = {
     "flex", "flex-col", "gap-4", 
     "justify-between",
     "items-center", "text-center",
+    "px-4",
     "min-[720px]:w-1/2",
-    "min-[720px]:items-start", "min-[720px]:text-left"
+    "min-[720px]:items-start", "min-[720px]:text-left",
+    "min-[720px]:px-0"
   ].join(" "),
   
   title: [
@@ -57,10 +65,14 @@ const styles = {
 };
 
 export default function ProjectCard({ image, title, description, stack = [], repo, url }) {
+  // Aplicamos los estilos de ProjectCard.jsx (imgBase) más los de placeholder si 'image' está vacío.
+  const imgBoxClasses = styles.imgBase + " " + (image ? "" : styles.imgPlaceholder);
+
   return (
     <article className={styles.articleBase}>
       <div className={styles.imgWrap}>
-        <div className={styles.imgBox}>
+        {/* El contenedor ahora tiene overflow-hidden */}
+        <div className={imgBoxClasses}>
           {image || "Imagen / Animación"}
         </div>
       </div>

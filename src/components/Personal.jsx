@@ -74,9 +74,9 @@ const styles = {
     "font-bold", "text-accent", "tracking-tight", "leading-tight",
     "text-2xl",
     "sm:text-4xl",
-    "min-[720px]:text-6xl",
-    "min-[1080px]:text-7xl",
-    "min-[1280px]:text-8xl"
+    "min-[720px]:text-5xl",
+    "min-[1080px]:text-6xl",
+    "min-[1280px]:text-7xl"
   ].join(" "),
 
   description: [
