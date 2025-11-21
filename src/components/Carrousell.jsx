@@ -28,7 +28,7 @@ const projects = [
   {
     id: 2,
     title: ">PreCode",
-    description: "Aplicación con React, Tailwind, Flask y Docker.\r\n",
+    description: "Una aplicacion inspirada en el pseudocódigo, que por medio de templa\r\n",
     stack: ["react", "tailwind", "python", "flask", "docker"],
     repo: "https://github.com/MateoLiberatore/PreCode",
     url: "https://mateoliberatore.github.io/PreCode",
