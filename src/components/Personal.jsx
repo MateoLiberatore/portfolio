@@ -42,16 +42,17 @@ const styles = {
 
   iconsContainer: [
     "w-full", "flex", "flex-col", "gap-6", 
-    "max-w-xl", 
-    "mx-auto", 
     "items-start", "mt-4", 
     "min-[720px]:w-full", "min-[720px]:mt-8", 
     "min-[1280px]:items-center", "min-[1280px]:w-5/12", "min-[1280px]:mt-0", 
     "min-[1280px]:max-w-none","min-[1280px]:mx-0","min-[1280px]:mt-15"
   ].join(" "),
+ 
   
   sectionWrapper: [
-    "flex", "flex-row", "items-center", 
+    "flex", 
+    "flex-col", "min-[720px]:flex-row", 
+    "items-start", "min-[720px]:items-center", 
     "w-full", 
     "mx-0", 
     "min-[720px]:w-full", 
@@ -60,7 +61,7 @@ const styles = {
     "min-[1280px]:mx-0" 
   ].join(" "),
 
-  iconTitle: "text-accent font-semibold text-base sm:text-lg flex-shrink-0 w-32", 
+  iconTitle: "text-accent font-semibold text-base sm:text-lg flex-shrink-0 w-32 mb-2 min-[720px]:mb-0", 
 
   title: [
     "font-bold", "text-accent", "tracking-tight", "leading-tight",
@@ -73,7 +74,8 @@ const styles = {
 
   description: [
     "text-slate-400", "max-w-xl", "font-ms",
-    "text-xs", "sm:text-base", "leading-tight"
+    "text-xs", 
+    "sm:text-base", "leading-tight"
   ].join(" ")
 };
 
@@ -89,16 +91,19 @@ export default function Personal({ themes, themeSelected, handleThemeChangeByVal
           <h1 className={styles.title}>
             Mateo Liberatore
           </h1>
+ 
           <p className={styles.description}>
             I am Systems Analyist and Full Stack Developer, focused on transforming business vision into concrete and efficient 
             technological solutions. My profile combines the capacity of an analyst to diagnose needs and design robust architectures 
-            with the technical skill of a Full Stack Developer to implement the solution end-to-end. My goal is to drive innovation by 
+            with the technical skill of a Full Stack Developer to implement the solution end-to-end. My goal is to drive innovation 
+            by 
             delivering software products that are both highly functional and strategically aligned with business objectives.
           </p>
           <div className={styles.themeContainer}>
             <ThemeSelector
               themes={themes}
               selectedValue={themeSelected.value}
+             
               onChangeByValue={handleThemeChangeByValue}
             />
           </div>
@@ -110,6 +115,7 @@ export default function Personal({ themes, themeSelected, handleThemeChangeByVal
         <div className={styles.sectionWrapper}>
           <p className={styles.iconTitle}>Frontend</p>
           <IconRow icons={["react", "javascript", "typescript", "tailwind", "css"]} />
+      
         </div>
         
         <div className={styles.sectionWrapper}>
@@ -120,6 +126,7 @@ export default function Personal({ themes, themeSelected, handleThemeChangeByVal
         <div className={styles.sectionWrapper}>
           <p className={styles.iconTitle}>Tools</p>
           <IconRow icons={["docker", "git", "linux"]} />
+    
         </div>
 
       </div>

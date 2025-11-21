@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const styles = {
   root: ["w-full", "h-full", "mx-auto"].join(" "),
-  slideWrap: ["px-", "sm:px-8", "h-full"].join(" ")
+  slideWrap: ["px-5", "sm:px-8", "h-full"].join(" ")
 };
 
 const projects = [
@@ -39,7 +39,7 @@ export default function Carrousell() {
     autoplaySpeed: 5000,
     pauseOnHover: true
   };
-
+  
   return (
     <section className={styles.root}>
       <h2 className="text-3xl sm:text-4xl font-bold mb-10 mt-5 text-center text-accent xl:text-center">
@@ -50,6 +50,7 @@ export default function Carrousell() {
           {projects.map((p) => (
             <div key={p.id} className={styles.slideWrap}>
               <ProjectCard {...p} image={null} />
+       
             </div>
           ))}
         </Slider>
