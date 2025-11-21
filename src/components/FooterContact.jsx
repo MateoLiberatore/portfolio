@@ -2,9 +2,9 @@ import React from "react";
 import ContactLink from "./elements/ContactLink";
 
 const styles = {
-  root: ["w-full", "py-2","mt-12", "mb-5"].join(" "),
+  root: ["w-full", "py-2","mt-8", "mb-5"].join(" "),
   inner: ["w-full", "flex", "justify-center"].join(" "),
-  list: ["flex", "flex-row", "gap-4", "sm:gap-12", "items-center"].join(" ")
+  list: ["flex", "flex-row", "gap-4", "sm:gap-10", "items-center"].join(" ")
 };
 
 export default function FooterContact() {
