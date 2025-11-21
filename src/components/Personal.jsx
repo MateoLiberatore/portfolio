@@ -6,7 +6,7 @@ import ThemeSelector from "./ThemeSelector";
 const styles = {
   root: [
     "w-full", "flex", "flex-col", "gap-8", "py-6", "px-4", "max-w-[1600px]", "mx-auto",
-    "items-center", "text-center", "mt-10",
+    "items-center", "text-center", "mt-8",
     "min-[720px]:items-center", "min-[720px]:text-center", "min-[720px]:px-8",
     "min-[1280px]:flex-row", "min-[1280px]:justify-between", "min-[1280px]:gap-16", "min-[1280px]:py-8",
     "min-[1280px]:items-start", "min-[1280px]:text-left"
