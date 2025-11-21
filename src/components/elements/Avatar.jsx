@@ -14,7 +14,7 @@ const styles = {
 };
 
 export default function Avatar() {
-  const imageUrl = "/IMG_9515.JPG"; 
+  const imageUrl = "public/IMG_9515.JPG"; 
 
   return (
     <div className={styles.container}>

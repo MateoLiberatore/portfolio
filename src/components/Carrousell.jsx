@@ -42,7 +42,7 @@ export default function Carrousell() {
 
   return (
     <section className={styles.root}>
-      <h2 className="text-3xl text-accent sm:text-4xl font-bold mb-10 mt-5 text-center text-foreground xl:text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-10 mt-5 text-center text-accent xl:text-center">
         Projects
       </h2>
       <div className="w-full">
