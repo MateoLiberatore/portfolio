@@ -41,7 +41,7 @@ const styles = {
   ].join(" "),
 
   iconsContainer: [
-    "w-full", "flex", "flex-col", "gap-6", "ml-12",
+    "w-full", "flex", "flex-col", "gap-6", 
     "max-w-xl", 
     "mx-auto", 
     "items-start", "mt-4", 
