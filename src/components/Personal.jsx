@@ -6,7 +6,7 @@ import ThemeSelector from "./ThemeSelector";
 const styles = {
   root: [
     "w-full", "flex", "flex-col", "gap-8", "py-6", "px-4", "max-w-[1600px]", "mx-auto",
-    "items-center", "text-center", "mt-8",
+    "items-center", "text-center", "mt-10",
     "min-[720px]:items-center", "min-[720px]:text-center", "min-[720px]:px-8",
     "min-[1280px]:flex-row", "min-[1280px]:justify-between", "min-[1280px]:gap-16", "min-[1280px]:py-8",
     "min-[1280px]:items-start", "min-[1280px]:text-left"
@@ -44,21 +44,14 @@ const styles = {
     "w-full", "flex", "flex-col", "gap-6", 
     "max-w-xl", 
     "mx-auto", 
-    "items-center", 
-    "mt-4", 
+    "items-start", "mt-4", 
     "min-[720px]:w-full", "min-[720px]:mt-8", 
-    "min-[1280px]:items-start", 
-    "min-[1280px]:w-5/12", "min-[1280px]:mt-0", 
+    "min-[1280px]:items-center", "min-[1280px]:w-5/12", "min-[1280px]:mt-0", 
     "min-[1280px]:max-w-none","min-[1280px]:mx-0","min-[1280px]:mt-15"
   ].join(" "),
- 
   
   sectionWrapper: [
-    "flex", 
-    "flex-col", 
-    "min-[720px]:flex-row", 
-    "items-center", 
-    "min-[1280px]:items-start", 
+    "flex", "flex-row", "items-center", 
     "w-full", 
     "mx-0", 
     "min-[720px]:w-full", 
@@ -67,7 +60,7 @@ const styles = {
     "min-[1280px]:mx-0" 
   ].join(" "),
 
-  iconTitle: "text-accent font-semibold text-base sm:text-lg flex-shrink-0 w-32 mb-2 min-[720px]:mb-0 text-center min-[720px]:text-left", 
+  iconTitle: "text-accent font-semibold text-base sm:text-lg flex-shrink-0 w-32", 
 
   title: [
     "font-bold", "text-accent", "tracking-tight", "leading-tight",
@@ -80,10 +73,7 @@ const styles = {
 
   description: [
     "text-slate-400", "max-w-xl", "font-ms",
-    "text-xs", 
-    "sm:text-base", "leading-tight",
-    "mx-auto", 
-    "min-[1280px]:mx-0"
+    "text-xs", "sm:text-base", "leading-tight"
   ].join(" ")
 };
 
@@ -99,21 +89,16 @@ export default function Personal({ themes, themeSelected, handleThemeChangeByVal
           <h1 className={styles.title}>
             Mateo Liberatore
           </h1>
- 
           <p className={styles.description}>
             I am Systems Analyist and Full Stack Developer, focused on transforming business vision into concrete and efficient 
             technological solutions. My profile combines the capacity of an analyst to diagnose needs and design robust architectures 
-            with the technical skill of a Full Stack Developer to implement the solution end-to-end.
-          </p>
-          <p className={styles.description}>
-            My goal is to drive innovation by delivering software products that are both highly functional and strategically aligned 
-            with business objectives.
+            with the technical skill of a Full Stack Developer to implement the solution end-to-end. My goal is to drive innovation by 
+            delivering software products that are both highly functional and strategically aligned with business objectives.
           </p>
           <div className={styles.themeContainer}>
             <ThemeSelector
               themes={themes}
               selectedValue={themeSelected.value}
-             
               onChangeByValue={handleThemeChangeByValue}
             />
           </div>
@@ -125,7 +110,6 @@ export default function Personal({ themes, themeSelected, handleThemeChangeByVal
         <div className={styles.sectionWrapper}>
           <p className={styles.iconTitle}>Frontend</p>
           <IconRow icons={["react", "javascript", "typescript", "tailwind", "css"]} />
-      
         </div>
         
         <div className={styles.sectionWrapper}>
@@ -136,7 +120,6 @@ export default function Personal({ themes, themeSelected, handleThemeChangeByVal
         <div className={styles.sectionWrapper}>
           <p className={styles.iconTitle}>Tools</p>
           <IconRow icons={["docker", "git", "linux"]} />
-    
         </div>
 
       </div>

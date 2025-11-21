@@ -13,9 +13,18 @@ const styles = {
   label: ["hidden", "sm:inline"].join(" ")
 };
 
-export default function ContactLink({ href, label, icon }) {
+export default function ContactLink({ href, label, icon, onClick }) {
+  
+  const shouldOpenNewTab = icon !== 'mail';
+
   return (
-    <a href={href} target="_blank" rel="noreferrer" className={styles.root}>
+    <a 
+      href={href} 
+      onClick={onClick} 
+      target={shouldOpenNewTab ? "_blank" : undefined} 
+      rel="noreferrer" 
+      className={styles.root}
+    >
       {iconMap[icon]}
       <span className={styles.label}>{label}</span>
     </a>

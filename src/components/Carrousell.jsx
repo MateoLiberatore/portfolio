@@ -5,8 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const styles = {
-  root: ["w-full", "h-full", "mx-auto"].join(" "),
-  slideWrap: ["px-5", "sm:px-8", "h-full"].join(" ") 
+  root: ["w-full", "h-full", "mx-auto","p-1","mt-2"].join(" "),
+  // Aumento del padding en slideWrap
+  slideWrap: ["px-10", "sm:px-16", "h-full"].join(" ") 
 };
 
 const projects = [
@@ -41,20 +42,14 @@ export default function Carrousell() {
   };
   
   return (
-    <section className={styles.root}>
-      <h2 className="text-3xl sm:text-4xl font-bold mb-10 mt-5 text-center text-accent xl:text-center">
-        Projects
-      </h2>
-      <div className="w-full">
-        <Slider {...settings}>
-          {projects.map((p) => (
-            <div key={p.id} className={styles.slideWrap}>
-              <ProjectCard {...p} image={null} />
-       
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </section>
+    <div className={styles.root}>
+      <Slider {...settings}>
+        {projects.map((p) => (
+          <div key={p.id} className={styles.slideWrap}>
+            <ProjectCard {...p} />
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 }
