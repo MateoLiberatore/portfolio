@@ -18,7 +18,7 @@ export default function ThemeSelector({ themes, selectedValue, onChangeByValue }
         const classes = [
           styles.btnBase, 
           styles.size, 
-          isSelected ? "ring-2 ring-offset-2 ring-offset-[#0f1720]" : "border border-white/10 opacity-70 hover:opacity-100 hover:scale-110"
+          isSelected ? "ring-2 ring-offset-2 ring-offset-[#0f1720]" : " opacity-60 hover:opacity-100 hover:scale-120"
         ].join(" ");
         
         return (

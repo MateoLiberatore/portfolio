@@ -14,8 +14,8 @@ const mapIcons = {
 const styles = {
   root: [
     "flex", "flex-wrap", "items-center", "text-accent",
-    "justify-start", "gap-6", 
-    "min-[720px]:justify-center", "min-[720px]:gap-5",
+    "justify-center", "gap-6", 
+    "min-[720px]:justify-center", 
     "min-[1280px]:justify-start"
   ].join(" "),
   
@@ -26,7 +26,7 @@ const styles = {
       "min-[1280px]:text-7xl" 
     ].join(" "),
 
-  iconWrapper: "p-1 hover:scale-150 transition-all duration-200 ease-in-out cursor-pointer"
+  iconWrapper: "p-2 hover:scale-200 transition-all duration-200 ease-in-out cursor-pointer"
 };
 
 export default function IconRow({ icons }) {

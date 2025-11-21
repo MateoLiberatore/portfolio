@@ -33,21 +33,21 @@ const styles = {
   ].join(" "),
   
   title: [
-    "text-2xl", "sm:text-3xl", "min-[720px]:text-4xl", 
+    "text-2xl", "sm:text-2xl", "min-[720px]:text-4xl", 
     "font-semibold", "text-accent"
   ].join(" "),
 
   description: ["text-body", "mt-2"].join(" "),
 
   stackRow: [
-    "flex", "flex-wrap", "gap-5", 
-    "text-3xl", "text-accent", 
+    "flex", "flex-wrap", "gap-4", 
+    "text-xl", "text-accent", 
     "items-start", "justify-start"
   ].join(" "),
 
   linkRow: [
-    "flex", "gap-5", "text-2xl", "text-accent", 
-    "items-start", "justify-start"
+    "flex", "gap-5", "text-3xl", "text-accent", 
+    "items-starts", "justify-start", ""
   ].join(" ")
 };
 
@@ -68,7 +68,7 @@ export default function ProjectCard({ image, title, description, stack = [], rep
 
         <div className={styles.stackRow}>
           {stack.map((s) => (
-            <span key={s} className="hover:scale-130 transition-base">
+            <span key={s} className="  hover:scale-150 transition-all duration-200 ease-in-out cursor-pointer">
               {techMap[s]}
             </span>
           ))}
@@ -76,12 +76,14 @@ export default function ProjectCard({ image, title, description, stack = [], rep
 
         <div className={styles.linkRow}>
           {repo && (
-            <a href={repo} target="_blank" rel="noreferrer" className="hover:scale-130 transition-base">
+            <a href={repo} target="_blank" rel="noreferrer" 
+            className="hover:scale-140 transition-all duration-200 ease-in-out cursor-pointer">
               <FaGithub />
             </a>
           )}
           {url && (
-            <a href={url} target="_blank" rel="noreferrer" className="hover:scale-130 transition-base">
+            <a href={url} target="_blank" rel="noreferrer" 
+            className="hover:scale-130 transition-all duration-200 ease-in-out cursor-pointer">
               <FaExternalLinkAlt />
             </a>
           )}

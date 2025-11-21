@@ -42,17 +42,23 @@ const styles = {
 
   iconsContainer: [
     "w-full", "flex", "flex-col", "gap-6", 
-    "items-start", "mt-4", 
+    "max-w-xl", 
+    "mx-auto", 
+    "items-center", 
+    "mt-4", 
     "min-[720px]:w-full", "min-[720px]:mt-8", 
-    "min-[1280px]:items-center", "min-[1280px]:w-5/12", "min-[1280px]:mt-0", 
+    "min-[1280px]:items-start", 
+    "min-[1280px]:w-5/12", "min-[1280px]:mt-0", 
     "min-[1280px]:max-w-none","min-[1280px]:mx-0","min-[1280px]:mt-15"
   ].join(" "),
  
   
   sectionWrapper: [
     "flex", 
-    "flex-col", "min-[720px]:flex-row", 
-    "items-start", "min-[720px]:items-center", 
+    "flex-col", 
+    "min-[720px]:flex-row", 
+    "items-center", 
+    "min-[1280px]:items-start", 
     "w-full", 
     "mx-0", 
     "min-[720px]:w-full", 
@@ -61,7 +67,7 @@ const styles = {
     "min-[1280px]:mx-0" 
   ].join(" "),
 
-  iconTitle: "text-accent font-semibold text-base sm:text-lg flex-shrink-0 w-32 mb-2 min-[720px]:mb-0", 
+  iconTitle: "text-accent font-semibold text-base sm:text-lg flex-shrink-0 w-32 mb-2 min-[720px]:mb-0 text-center min-[720px]:text-left", 
 
   title: [
     "font-bold", "text-accent", "tracking-tight", "leading-tight",
