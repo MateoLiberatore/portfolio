@@ -92,7 +92,7 @@ export default function Carrousell() {
       title: "Custom Assistant",
       description: "A console tool for generating highly customizable Artificial Intelligence agents, with the ability to save valuable conversations. Primarily designed for integration into multiple tools with the goal of easily y simply integrating language models for daily and diverse optimization tasks. Still in development.\r\n",
       stack: ["python","docker"],
-      repo: "#",
+      repo: "https://github.com/MateoLiberatore/Custom-assistant",
       image: (
           <img 
             src={"/portfolio/assist.jpeg"} 
