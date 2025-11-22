@@ -24,7 +24,6 @@ const styles = {
   imgBase: [
     "w-full", "h-48", "sm:h-56", "min-[720px]:h-64", "min-[1280px]:h-72", 
     "rounded-lg",
-    // FIX: Agregamos overflow-hidden para recortar correctamente la imagen dentro del contenedor redondeado y eliminar el borde inferior.
     "overflow-hidden" 
   ].join(" "),
   
@@ -48,7 +47,7 @@ const styles = {
     "font-semibold", "text-accent"
   ].join(" "),
 
-  description: ["text-body", "mt-2"].join(" "),
+  description: ["text-sm", "mt-2"].join(" "),
 
   stackRow: [
     "flex", "flex-wrap", "gap-4", 
@@ -65,13 +64,11 @@ const styles = {
 };
 
 export default function ProjectCard({ image, title, description, stack = [], repo, url }) {
-  // Aplicamos los estilos de ProjectCard.jsx (imgBase) más los de placeholder si 'image' está vacío.
   const imgBoxClasses = styles.imgBase + " " + (image ? "" : styles.imgPlaceholder);
 
   return (
     <article className={styles.articleBase}>
       <div className={styles.imgWrap}>
-        {/* El contenedor ahora tiene overflow-hidden */}
         <div className={imgBoxClasses}>
           {image || "Imagen / Animación"}
         </div>

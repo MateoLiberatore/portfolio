@@ -72,7 +72,7 @@ const styles = {
 
   title: [
     "font-bold", "text-accent", "tracking-tight", "leading-tight",
-    "text-2xl",
+    "text-3xl",
     "sm:text-4xl",
     "min-[720px]:text-5xl",
     "min-[1080px]:text-6xl",
@@ -80,11 +80,11 @@ const styles = {
   ].join(" "),
 
   description: [
-    "text-slate-400", "max-w-xl", "font-ms",
+    "text-slate-300", "max-w-xl", "font-ms",
     "text-xs", 
     "sm:text-base", "leading-tight",
     "mx-auto", 
-    "min-[1280px]:mx-0"
+    "min-[1280px]:mx-0",
   ].join(" ")
 };
 

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* 🔥 NUEVO: registra los colores para Tailwind 4 */
+
 @theme {
   --color-background: var(--color-background);
   --color-foreground: var(--color-foreground);
@@ -8,7 +8,7 @@
   --color-accent: var(--color-accent);
 }
 
-/* Tus variables reales */
+
 :root {
   --color-background: #0f1720;
   --color-foreground: #d1d9df;
